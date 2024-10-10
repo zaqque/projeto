@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de Amor</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ADD8E6; /* Azul Claro */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .cartao {
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.5s;
+        }
+
+        .cartao:hover {
+            transform: rotateY(180deg);
+        }
+
+        .mensagem {
+            display: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .mostrar-mensagem {
+            display: block;
+        }
+
+        .botao {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #ff1c5c;
+        }
+    </style>
+</head>
+<body>
+    <div class="cartao" id="cartao">
+        <h2>Para Você Emily</h2>
+        <p>Clique no botão para abrir sua mensagem.</p>
+        <button class="botao" onclick="mostrarMensagem()">Abrir Mensagem</button>
+        <div class="mensagem" id="mensagem">
+            <h3>Surpresa! ❤️</h3>
+            <p>Eu fiz esse pequeno projeto pra alegrar um pouco a menina mais linda que eu conheço, você!</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarMensagem() {
+            var mensagem = document.getElementById('mensagem');
+            mensagem.classList.add('mostrar-mensagem');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
